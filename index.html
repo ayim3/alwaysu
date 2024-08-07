@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>To Rachel</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*MEU CODIGO DO AMOR</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Oi meu bem  !<br />
+			Queria te fazer algo<br />
+			<span class="comments">// Faz tempo que nao faco isso. </span><br />
+			Desde do dia que nos conhecemos;<br />
+			<span class="comments">// Seu rosto, sua voz, suas palavras.</span><br />
+			Tudo isso ficou impresso em meu coração;<br />
+			Conforme o tempo passa;<br />
+			So ficamos mais fortes;<br />
+			Um caminho da paixão para o amor;<br />
+			Estamos andando juntos;<br />
+			Me desculpe por ser paia as vezes  ;<br />
+			<span class="comments">// Estou tentando ser um otimo namorado pra voce.</span><br />
+			Muito obrigado por me aturar e nao desistir de mim ;<br />
+			Quero poder dividir todos os dias com voce;<br />
+			Ate meu ultimo respiro;<br />
+			<br>
+			<br>
+			Tudo que eu quero dizer é:<br />
+			Babe, eu vou te amar para sempre;<br />
+			<br>
+			<br>
+			Agora se você quiser me abraçar você pode tocar o coração abaixo<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					NOSSOS DIAS JUNTOS:
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					 Meu coração bate por você  <br/>
+					<div class="signature">- Sheliton</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 1.9 - 60;
+var together = new Date();
+together.setFullYear(2023, 3, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
